@@ -14,16 +14,33 @@ export default class Character {
       'Zombie',
     ];
 
-    if (typeof name === 'string' && name.length > 2 || name.length < 10) {
-      throw new Error('Имя героя должно содердать от 2 до 10 символов');
-    } else {
-      this.name = name;
+    if (!typeof name === 'string' && name.length < 2 || name.length > 10) {
+      throw new Error('Имя героя должно содержать от 2 до 10 не цифровых символа');
     };
 
-    if (Character.heroes.includes(type)) {
+    if (!Character.heroes.includes(type)) {
       throw new Error('Выберите одного из доступных : Boweman, Swordsman, Magician, Daemon, Undead, Zombie');
-    } else {
-      this.type = type;
     };
+  };
+
+  levelUp() {
+    if (this.health > 0) {
+      this.health = 100;
+      this.level += 1;
+      this.attack *= 1.2;
+      this.deffence *= 1.2;
+    } else {
+      throw new Error("Нельзя повысить уровень умершего!");
+    }
+    return 1;
+  }
+
+  damage(points) {
+    if (this.health > 0) {
+      this.health -= points * (1 - this.deffence / 100);
+    }
+    if (this.health < 0) {
+      this.health = 0;
+    }
   };
 };
