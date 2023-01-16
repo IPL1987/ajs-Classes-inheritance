@@ -14,8 +14,12 @@ export default class Character {
       'Zombie',
     ];
 
-    if (!typeof name === 'string' && name.length < 2 || name.length > 10) {
-      throw new Error('Имя героя должно содержать от 2 до 10 не цифровых символа');
+    if (typeof name !== 'string') {
+      throw new Error('Имя не должно содержать цифр')
+    }
+
+    if (name.length < 2 || name.length >10) {
+      throw new Error('Имя героя должно содержать от 2 до 10 символов');
     };
 
     if (!Character.heroes.includes(type)) {
