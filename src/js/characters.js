@@ -5,7 +5,7 @@ export default class Character {
     this.health = 100;
     this.level = 1;
 
-    const  heroes = [
+    const heroes = [
       'Bowman',
       'Daemon',
       'Magician',

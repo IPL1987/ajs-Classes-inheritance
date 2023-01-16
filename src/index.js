@@ -1,3 +1,7 @@
-// TODO: write your code in app.js
-import './js/app.js';
-import './css/style.css';
+import "./js/characters";
+import "./js/bowman";
+import "./js/daemon";
+import "./js/magician";
+import "./js/swordsman";
+import "./js/undean";
+import "./js/zombie";
