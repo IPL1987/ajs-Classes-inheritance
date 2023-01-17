@@ -34,7 +34,7 @@ export default class Character {
       this.attack *= 1.2;
       this.deffence *= 1.2;
     } else {
-      throw new Error("Нельзя повысить уровень умершего!");
+      throw new Error('Нельзя повысить уровень умершего!');
     }
     return true;
   }
