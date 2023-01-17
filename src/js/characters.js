@@ -1,13 +1,4 @@
 export default class Character {
-  static heroes = [
-    'Bowman',
-    'Daemon',
-    'Magician',
-    'Swordsman',
-    'Undead',
-    'Zombie',
-  ];
-
   constructor(name, type) {
     this.name = name;
     this.type = type;
@@ -26,6 +17,15 @@ export default class Character {
       throw new Error('Выберите одного из доступных : Boweman, Swordsman, Magician, Daemon, Undead, Zombie');
     }
   }
+
+  static heroes = [
+    'Bowman',
+    'Daemon',
+    'Magician',
+    'Swordsman',
+    'Undead',
+    'Zombie',
+  ];
 
   levelUp() {
     if (this.health > 0) {
