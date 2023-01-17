@@ -20,6 +20,11 @@
         "ignoreRestSiblings": false
       }
     ],
-    "import/extensions": [0, {  "js": "always"  }]
+    "import/extensions": [
+      0,
+      {
+        "js": "always"
+      }
+    ]
   }
 }
