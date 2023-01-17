@@ -32,7 +32,7 @@ export default class Character {
       this.health = 100;
       this.level += 1;
       this.attack *= 1.2;
-      this.deffence *= 1.2;
+      this.defence *= 1.2;
     } else {
       throw new Error('Нельзя повысить уровень умершего!');
     }
@@ -41,7 +41,7 @@ export default class Character {
 
   damage(points) {
     if (this.health > 0) {
-      this.health -= points * (1 - this.deffence / 100);
+      this.health -= points * (1 - this.defence / 100);
     }
     if (this.health < 0) {
       this.health = 0;
