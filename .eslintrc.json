@@ -5,13 +5,13 @@
     "browser": true,
     "jest": true
   },
+  "parser": "@babel/eslint-parser",
   "rules": {
     "no-restricted-syntax": [
       "error",
       "LabeledStatement",
       "WithStatement"
     ],
-    "parser": "@babel/eslint-parser",
     "no-unused-vars": [
       "error",
       {

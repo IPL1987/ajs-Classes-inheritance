@@ -15,17 +15,17 @@ export default class Character {
     this.level = 1;
 
     if (typeof name !== 'string') {
-      throw new Error('Имя не должно содержать цифр')
+      throw new Error('Имя не должно содержать цифр');
     }
 
     if (name.length < 2 || name.length > 10) {
       throw new Error('Имя героя должно содержать от 2 до 10 символов');
-    };
+    }
 
     if (!Character.heroes.includes(type)) {
       throw new Error('Выберите одного из доступных : Boweman, Swordsman, Magician, Daemon, Undead, Zombie');
-    };
-  };
+    }
+  }
 
   levelUp() {
     if (this.health > 0) {
@@ -46,5 +46,5 @@ export default class Character {
     if (this.health < 0) {
       this.health = 0;
     }
-  };
-};
+  }
+}
